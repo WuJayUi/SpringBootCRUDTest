@@ -20,8 +20,9 @@ public class exampleService {
 		return testdao.findAll();
 	}
 
+	
 	public test getTestById(String id) {
-		return testdao.getOne(id);
+		return testdao.getReferenceById(id);
 	}
 
 	public test createUser(test test) {

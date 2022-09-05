@@ -70,7 +70,13 @@ public class ExampleController {
 	public String saveUser(@RequestParam Map<String, Object> model, Map<String, Object> map) {
 		log.info("result");
 		this.message = "成功建立腳色";
-		test tx = new test((String) model.get("id"), (String) model.get("name"));
+//		String s = (String) model.get("id");
+//		String y = (String) model.get("name");
+//		test tx = new test();
+//		tx.setId(s);
+//		tx.setName(y);
+		
+		test tx = new test((String) model.get("id"),(String) model.get("name"));
 		examS.createUser(tx);
 		List<test> list = examS.getTestList();
 		map.put("message", this.message);
