@@ -4,7 +4,7 @@
 FROM maven:3.8.2-jdk-11 AS build
 COPY pom.xml .
 RUN mvn dependency:go-offline
-COPY src ./src
+COPY . .
 RUN mvn clean package -DskipTests
 
 #
